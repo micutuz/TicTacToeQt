@@ -12,7 +12,7 @@ int main(int argc, char* argv[])
     GameController* gameController = new GameController();
     engine.rootContext()->setContextProperty("gameController", gameController);
 
-    engine.load(QUrl(QStringLiteral("qrc:/main.qml")));
+    engine.load(QUrl(QStringLiteral("qrc:/qml/main.qml")));
 
     return app.exec();
 }

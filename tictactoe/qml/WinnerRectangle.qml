@@ -1,5 +1,5 @@
 import QtQuick 2.0
-import "UtilityFunctions.js" as UtilityFunctions
+import "../javascript/UtilityFunctions.js" as UtilityFunctions
 //better action_button?
 
 Rectangle {

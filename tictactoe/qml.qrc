@@ -1,14 +1,14 @@
 <RCC>
     <qresource prefix="/">
-        <file>main.qml</file>
-        <file>GameSquare.qml</file>
-        <file>UtilityFunctions.js</file>
-        <file>GameButton.qml</file>
-        <file>GameGridRectangle.qml</file>
-        <file>WinnerRectangle.qml</file>
-        <file>GameInterface.qml</file>
-        <file>OptionButtons.qml</file>
-        <file>ScoreText.qml</file>
-        <file>CurrentPlayer.qml</file>
+        <file>qml/CurrentPlayer.qml</file>
+        <file>qml/GameButton.qml</file>
+        <file>qml/GameGridRectangle.qml</file>
+        <file>qml/GameInterface.qml</file>
+        <file>qml/GameSquare.qml</file>
+        <file>qml/OptionButtons.qml</file>
+        <file>qml/ScoreText.qml</file>
+        <file>qml/WinnerRectangle.qml</file>
+        <file>qml/main.qml</file>
+        <file>javascript/UtilityFunctions.js</file>
     </qresource>
 </RCC>
