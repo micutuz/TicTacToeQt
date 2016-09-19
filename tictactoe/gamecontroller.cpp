@@ -16,8 +16,8 @@ GameController::GameController(QObject* parent)
         m_squares->append(new Square(this));
     }
 
-    int x=2;
-    qDebug()<<x;
+    int y = 2;
+    qDebug() << y;
 }
 
 void GameController::requestMove(const int position)
