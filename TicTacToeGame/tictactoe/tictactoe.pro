@@ -1,9 +1,9 @@
-TEMPLATE = app
+TEMPLATE = lib
 
 QT += qml quick
 CONFIG += c++11
 
-SOURCES += main.cpp \
+SOURCES += \
     gamecontroller.cpp \
     square.cpp \
     qqmlobjectlistmodel.cpp

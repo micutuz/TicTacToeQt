@@ -1,9 +1,9 @@
 #ifndef GAMECONTROLLER_H
 #define GAMECONTROLLER_H
 
+#include "qqmlobjectlistmodel.h"
+#include "square.h"
 #include <QObject>
-#include <qqmlobjectlistmodel.h>
-#include <square.h>
 
 const int kMatrixSize = 3;
 
@@ -35,6 +35,7 @@ public:
     void setWinner(const int winner);
     void setGameFinished(const bool isGameFinished);
 
+    int runApplication(int argc, char* argv[]);
 signals:
     void playerChanged();
     void scorePlayer1Changed();
@@ -45,6 +46,7 @@ public slots:
 
 private:
     // check the winner
+    void init();
     void checkGameStatus(const int position, Square::SelectionType selectedType);
     void selectWinner(const Square::SelectionType selectedType);
 

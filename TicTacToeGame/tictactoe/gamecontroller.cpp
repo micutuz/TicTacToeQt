@@ -1,16 +1,25 @@
 #include "gamecontroller.h"
 #include <QDebug>
+#include <QGuiApplication>
+#include <QQmlApplicationEngine>
+#include <QQmlContext>
 
 GameController::GameController(QObject* parent)
     : QObject(parent)
-    , m_squares(new QQmlObjectListModel<Square>(this))
-    , m_player(1)
-    , m_scorePlayer1(0)
-    , m_scorePlayer2(0)
-    , m_winner(0)
-    , m_moveCount(0)
-    , m_isGameFinished(false)
 {
+    init();
+}
+
+void GameController::init()
+{
+    this->m_squares        = new QQmlObjectListModel<Square>(this);
+    this->m_player         = 1;
+    this->m_scorePlayer1   = 0;
+    this->m_scorePlayer2   = 0;
+    this->m_winner         = 0;
+    this->m_moveCount      = 0;
+    this->m_isGameFinished = false;
+
     for (int i = 0; i < kMatrixSize * kMatrixSize; i++)
     {
         m_squares->append(new Square(this));
@@ -205,4 +214,18 @@ void GameController::setGameFinished(const bool isGameFinished)
 {
     m_isGameFinished = isGameFinished;
     emit isGameFinishedChanged();
+}
+
+int GameController::runApplication(int argc, char* argv[])
+{
+    init();
+    QGuiApplication app(argc, argv);
+
+    QQmlApplicationEngine engine;
+
+    engine.rootContext()->setContextProperty("gameController", this);
+
+    engine.load(QUrl(QStringLiteral("qrc:/qml/main.qml")));
+
+    return app.exec();
 }
