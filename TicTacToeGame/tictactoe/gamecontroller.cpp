@@ -38,7 +38,14 @@ void GameController::requestMove(const int position)
     {
         return;
     }
-    else if (m_player == 1)  // check player turn
+
+    makeMoveOnSelectedSquare(position);
+}
+
+void GameController::makeMoveOnSelectedSquare(const int position)
+{
+    Square* selectedSquare = m_squares->at(position);
+    if (m_player == 1)  // check player turn
     {
         selectedSquare->setSelection(Square::SelectionType::Player1);
         setPlayer(2);

@@ -47,6 +47,7 @@ public slots:
 private:
     // check the winner
     void init();
+    void makeMoveOnSelectedSquare(const int position);
     void checkGameStatus(const int position, Square::SelectionType selectedType);
     void selectWinner(const Square::SelectionType selectedType);
 
