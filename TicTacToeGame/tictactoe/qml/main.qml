@@ -7,6 +7,7 @@ Window {
     height: 230
     title: qsTr("Tic Tac Toe")
 
+    property var game: gameController
     GameInterface {
         anchors.fill:parent
     }

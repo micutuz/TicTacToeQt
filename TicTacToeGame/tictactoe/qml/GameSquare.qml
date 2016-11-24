@@ -8,7 +8,7 @@ Rectangle {
     MouseArea {
         anchors.fill: parent
         onClicked: {
-            gameController.requestMove(index)
+            game.requestMove(index)
         }
     }
 
@@ -19,3 +19,5 @@ Rectangle {
         font.pointSize: 32
     }
 }
+
+// TO DO : relative sizes

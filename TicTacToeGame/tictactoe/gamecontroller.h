@@ -18,11 +18,13 @@ class GameController : public QObject
     Q_PROPERTY(int isGameFinished READ getGameFinished NOTIFY isGameFinishedChanged)
 
 public:
+    void init();
     explicit GameController(QObject* parent = 0);
     Q_INVOKABLE void requestMove(const int position);
     Q_INVOKABLE void resetGame();
     Q_INVOKABLE void resetScore();
 
+private:
     int  getPlayer() const;
     int  getScorePlayer1() const;
     int  getScorePlayer2() const;
@@ -35,7 +37,6 @@ public:
     void setWinner(const int winner);
     void setGameFinished(const bool isGameFinished);
 
-    int runApplication(int argc, char* argv[]);
 signals:
     void playerChanged();
     void scorePlayer1Changed();
@@ -45,8 +46,6 @@ signals:
 public slots:
 
 private:
-    // check the winner
-    void init();
     void makeMoveOnSelectedSquare(const int position);
     void checkGameStatus(const int position, Square::SelectionType selectedType);
     void selectWinner(const Square::SelectionType selectedType);

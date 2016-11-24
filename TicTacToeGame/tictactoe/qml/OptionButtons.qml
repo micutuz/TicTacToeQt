@@ -6,14 +6,14 @@ Row {
         id: buttonPlayAgain
         text: "Play Again"
         onClicked: {
-            gameController.resetGame()
+            game.resetGame()
         }
     }
     GameButton {
         id: resetScore
         text: "Reset Score"
         onClicked: {
-            gameController.resetScore()
+            game.resetScore()
         }
     }
 }

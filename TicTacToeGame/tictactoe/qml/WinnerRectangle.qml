@@ -7,9 +7,11 @@ Rectangle {
     //anchors.centerIn: parent
     width:100
     height:25
-    visible: gameController.isGameFinished
+    visible: game.isGameFinished
     Text {
         anchors.centerIn: parent
-        text: UtilityFunctions.ResultToString(gameController.winner)
+        text: UtilityFunctions.ResultToString(winner)
     }
 }
+
+// Winner PopUp

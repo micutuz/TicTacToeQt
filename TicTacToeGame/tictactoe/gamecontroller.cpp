@@ -111,7 +111,7 @@ void GameController::checkGameStatus(const int position, Square::SelectionType s
         }
     }
 
-    // check second diagonal -NOT WORKING
+    // check second diagonal
     for (i = 0; i < kMatrixSize; i++)
     {
         if (selectedType != m_squares->at(i * kMatrixSize + (kMatrixSize - 1 - i))->getSelection())
@@ -221,18 +221,4 @@ void GameController::setGameFinished(const bool isGameFinished)
 {
     m_isGameFinished = isGameFinished;
     emit isGameFinishedChanged();
-}
-
-int GameController::runApplication(int argc, char* argv[])
-{
-    init();
-    QGuiApplication app(argc, argv);
-
-    QQmlApplicationEngine engine;
-
-    engine.rootContext()->setContextProperty("gameController", this);
-
-    engine.load(QUrl(QStringLiteral("qrc:/qml/main.qml")));
-
-    return app.exec();
 }
