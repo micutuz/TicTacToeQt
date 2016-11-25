@@ -9,7 +9,7 @@ Rectangle {
         cellWidth: 52
         cellHeight: 52
         id:gameGrid
-        model: squares
+        model: game.squares
         delegate: GameSquare {}
     }
 
