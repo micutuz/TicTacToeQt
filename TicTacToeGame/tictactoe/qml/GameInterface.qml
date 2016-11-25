@@ -1,29 +1,28 @@
 import QtQuick 2.5
 import QtQuick.Controls 1.4
-
+import QtQuick.Layouts 1.1
 
 Rectangle {
     id:interfaceRectangle
 
-    CurrentPlayer {
-        id:currentPlayer
+    ColumnLayout {
         anchors.horizontalCenter: parent.horizontalCenter
-    }
+        CurrentPlayer {
+            id:currentPlayer
+            anchors.horizontalCenter: parent.horizontalCenter
+        }
 
-    GameGridRectangle {
-        id: gameRectangle
-        anchors.top: currentPlayer.bottom
-        anchors.horizontalCenter: interfaceRectangle.horizontalCenter
-    }
 
-    ScoreText {
-        id:scoreText
-        anchors.top: gameRectangle.bottom
-        anchors.horizontalCenter: parent.horizontalCenter
-    }
+        GameGridRectangle {
+            width:156
+            height:156
+        }
 
-    OptionButtons {
-        anchors.top:scoreText.bottom
-        anchors.horizontalCenter: interfaceRectangle.horizontalCenter
+
+        ScoreText {
+        }
+
+        OptionButtons {
+        }
     }
 }

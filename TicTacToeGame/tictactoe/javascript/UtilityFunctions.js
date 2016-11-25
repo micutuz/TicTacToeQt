@@ -23,3 +23,8 @@ function ScoreToString(scorePlayer1, scorePlayer2)
 {
     return "Player 1    " + scorePlayer1 + " - " + scorePlayer2 + "    Player 2";
 }
+
+function CellsPerRow(numberOfSquares)
+{
+    return Math.sqrt(numberOfSquares);
+}

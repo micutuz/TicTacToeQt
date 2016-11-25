@@ -2,8 +2,9 @@ import QtQuick 2.0
 import "../javascript/UtilityFunctions.js" as UtilityFunctions
 Rectangle {
     id: rect
-    width:50
-    height:50
+    height: cellSize-2
+    width:  cellSize-2
+
     color:"grey"
     MouseArea {
         anchors.fill: parent
@@ -19,5 +20,3 @@ Rectangle {
         font.pointSize: 32
     }
 }
-
-// TO DO : relative sizes
