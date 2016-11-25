@@ -14,7 +14,7 @@ Rectangle {
     }
 
     property var winner : game.winner
-    WinnerRectangle {
+    WinnerPopUp {
         anchors.centerIn: parent
     }
 }
