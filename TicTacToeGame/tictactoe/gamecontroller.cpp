@@ -1,8 +1,6 @@
 #include "gamecontroller.h"
 #include <QDebug>
 #include <QGuiApplication>
-#include <QQmlApplicationEngine>
-#include <QQmlContext>
 
 GameController::GameController(QObject* parent)
     : QObject(parent)
